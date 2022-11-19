@@ -21,11 +21,14 @@
 
 body {
     margin: 0;   
-    margin-inline: auto;                                             
+    margin-inline: auto;
+    max-width: 1920px;  
+    height: 100%;                                           
 }
 .container {
-    max-width: 1570px;
+    max-width: 1655px;
     background: var(--c-white);
+    margin-inline: auto;
 }
 .pd {
     padding: 14px 210px;
@@ -91,9 +94,11 @@ body {
 
 /*main start*/
 .main {
-    padding: 0px 0px 0px 207px;
+    padding: 0px 207px 0px 207px;
 }
 .main__container {
+    width: 1507px;
+    max-width: 1920px;
     display: grid;
     grid-template-areas: 
     "info img";
@@ -129,7 +134,8 @@ body {
     line-height: 25px;
     background-color: var(--c-main);
     color: var(--c-white);
-    border: 1px solid var(--c-white);
+    border: 1px solid var(--c-main);
+    border-radius: 4px;
     cursor: pointer;
 }
 .managing-main__img {
@@ -140,6 +146,76 @@ body {
 }
 /*block how-it-works*/
 .main__explanation {
-    margin-bottom: 169px;
-    padding: 0px 207px 0px 0px;
+    margin-top: 169px;
+    max-width: 1570px;
+}
+.explanation-main__comment {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 157%;
+    color: var(--c-text)
+}
+.explanation-main__row-first {
+    display: flex;
+    gap: 136px;
+    flex-direction: row;
+}
+.row_first-main__col-6 {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+}
+.col_6-main__title {
+    max-width: 584px;
+    font-family: var(--font-add);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 157%;
+    color: var(--c-main);
+    margin: 0;
+}
+.col_6-main__description {
+    max-width: 671px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--c-text);
+    margin: 0;
+}
+.explanation-main__row-second {
+    margin-top: 82px;
+    display: flex;
+    gap: 66px;
+    flex-direction: row;
+}
+.row_second-main__col-4 {
+    flex: 0 1 33.333%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.col_4-main__title {
+    margin: 0;
+    margin-bottom: 21px;
+    font-family: var(--font-add);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    color: var(--c-black)  
+}
+.col_4-main__description {
+    margin: 0;
+    margin-bottom: 66px;
+    height: 150px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--c-text)
+}
+.col_4-main__img {
+    width: 100%;
+    min-width: 390px;
 }
