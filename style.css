@@ -26,12 +26,13 @@ body {
     height: 100%;                                           
 }
 .container {
-    max-width: 1655px;
+    max-width: 1920px;
     background: var(--c-white);
     margin-inline: auto;
+    border: 1px solid var(--c-border);
 }
-.pd {
-    padding: 14px 210px;
+.pd-h {
+    padding: 14px 276px;
     border-bottom: 1px solid var(--c-border);
 }
 /*header start*/
@@ -43,7 +44,7 @@ body {
 .header__logo {
     max-width: 80px;
 }
-.nav-header__list {
+.nav__list {
     display: flex;
     align-items: center;
     gap: 72px;
@@ -53,10 +54,9 @@ body {
     font-size: 20px;
     line-height: 24px;
 }
-.nav-header__list a {
+.header__nav a{
     text-decoration: none;
     color: var(--c-nav)
-    
 }
 .header__links {
     display: flex;
@@ -94,10 +94,10 @@ body {
 
 /*main start*/
 .main {
-    padding: 0px 207px 0px 207px;
+    padding: 0px 207px;
 }
 .main__container {
-    width: 1507px;
+    width: 1717px;
     max-width: 1920px;
     display: grid;
     grid-template-areas: 
@@ -105,20 +105,19 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.container-main__managing {
+.container-main__column {
     grid-area: info;
     max-width: 440px;
     padding-right: 20px;
 }
-.managing-main__title {
+.column-main__title {
     font-family: var(--font-add);
     font-weight: 700;
     font-size: 65px;
     line-height: 74px;
     color: var(--c-main);
-    max-width: 440px;
 }
-.managing-main__description {
+.column-main__description {
     font-family: var(--font-main);
     font-style: normal;
     font-weight: 400;
@@ -126,7 +125,7 @@ body {
     line-height: 31px;
     color: var(--c-text)
 }
-.managing-main__btn {
+.column-main__btn {
     padding: 20px 50px;
     font-family: var(--font-main);
     font-weight: 400;
@@ -138,11 +137,13 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-.managing-main__img {
+.container-main__img {
     grid-area: img;
     max-width: 792px;
     width: 100%;
-    right: -207px;
+}
+.container-main__img img{
+    width: 100%;
 }
 /*block how-it-works*/
 .main__explanation {
@@ -189,6 +190,7 @@ body {
     display: flex;
     gap: 66px;
     flex-direction: row;
+    margin-bottom: 393px;
 }
 .row_second-main__col-4 {
     flex: 0 1 33.333%;
@@ -219,3 +221,91 @@ body {
     width: 100%;
     min-width: 390px;
 }
+.container__story {
+    background-color: var(--c-bg);
+    display: grid;
+    grid-template-areas: 
+    "col media";
+    max-width: 1920px;
+    width: 1920px;
+    padding: 229px 207px 177px 207px;
+    align-items: center;
+    gap: 35px;
+}
+.story-container__column {
+    grid-area: col;
+    max-width: 580px;
+}
+.column-container__title {
+    font-family: var(--font-add);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 157%;
+    color: var(--c-white);
+    margin-bottom: 33px;
+}
+.column-container__description {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 157%;
+    color: var(--c-white);
+    margin-bottom: 57px;
+}
+.column-container__btn {
+    padding: 20px 50px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--c-white);
+    background: var(--c-main);
+    border: 1px solid var(--c-main);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.story-container__media {
+    grid-area: media;
+    max-width: 895px;
+    width: 100%;
+}
+.main__product {
+    display: grid;
+    grid-template-areas: 
+    "img col";
+    gap: 87px;
+    padding: 120px 68px 242px 128px;
+    align-items: center;
+}
+.product-main__image {
+    grid-area: img;
+    max-width: 638px;
+    width: 100%;
+}
+.product-main__column {
+    grid-area: col;
+    max-width: 584px;
+}
+.column-main__product {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 157%;
+    color: var(--c-text)
+}
+.pd-f {
+    padding: 14px 276px;
+    background: var(--c-bg);
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__logo {
+}
+.footer__nav a{
+    text-decoration: none;
+    color: var(--c-white)
+}
+
