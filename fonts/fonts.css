@@ -1,0 +1,15 @@
+/*font: Georgia [Regular/Bold]*/
+    @font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Georgia Regular'), url('georgia.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Georgia Bold'), url('georgiab.woff') format('woff');
+    }
