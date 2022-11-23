@@ -19,6 +19,7 @@
     --c-border: #D6D6D6;
     --c-text_btn: #000000;
     --c-border_btn: #00ca79;
+    --c-menu: rgb(127, 127, 127,0.1);
 }
 
 body {
@@ -95,7 +96,6 @@ body {
     font-size: 20px;
     line-height: 25px;
 }
-
 .links-header__btn:hover {
     box-shadow: 0 0 10px 0 var(--c-border_btn) inset, 0 0 10px 4px var(--c-border_btn);
     transition: all 0.2s ease-in-out;
@@ -106,6 +106,13 @@ body {
 }
 /*header end*/
 
+/*menu button*/
+.menu__btn {
+    display: none;
+}
+.input {
+    opacity: 0;
+}
 /*short start*/
 .short {
     padding: 0px 207px;
@@ -360,10 +367,6 @@ body {
     }
 }
 @media (max-width:1480px) {
-    /*header*/
-    .nav__list {
-        display: none;
-    }
     /*short__container*/
     .column-short__title, .column-short__description {
         background: rgb(255, 255, 255, 0.35);
@@ -388,6 +391,61 @@ body {
     }
 }
 @media (max-width:1300px) {
+    /*header*/
+    .header__logo {
+        padding-left: 50px;
+    }
+    .header__nav ul {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 95px;
+        left: 69px;
+        width: 200px;
+        margin: 0;
+        gap: 30px;
+        list-style: none;
+        text-align: center;
+        padding: 30px 0px 30px 0px;
+        transition: all .2s ease-in-out;
+        z-index: 1;
+        background: var(--c-main);
+        line-height: 150%;
+        justify-content: center;
+        border-radius: 0px 14px 14px 0px;
+    }
+    .header__nav a {
+        color: var(--c-white);
+    }
+    .label {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 25px;
+        left: 30px;
+        width: 200px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    span {
+        padding: 10px;
+        transition: all .2s ease-in-out;
+    }
+    .header:has(#menu-nav:checked) .nav__list {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+    .header:has(#menu-nav:checked) span {
+        background: var(--c-menu);
+        padding: 10px 10px;
+        border-radius: 25%;
+    }
     /*short__container*/
     .short__container {
         padding: 320px 0px 140px 0px;
@@ -444,6 +502,9 @@ body {
     }
 }
 @media (max-width:640px) {
+    .header__logo {
+        padding-left: 70px;
+    }
     .pd-h {
         padding: 20px 30px;
     }
